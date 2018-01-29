@@ -5,15 +5,23 @@ import sys, random
 assert sys.version_info >= (3,4), "This script requires at least Python 3.4"
 
 print("Hello and Welcome to Guess That Number! RNG Edition")
+try:
+	u = int(input("Please Select a level: 1, 2, 3, 4, 5")) # asks the users to select a level and converts the string into an integer
 
-u = int(input("Please Select a level: 1, 2, 3, 4, 5")) # asks the users to select a level and converts the string into an integer
+	if u == 1: z = 10
+	elif u == 2: z = 20
+	elif u == 3: z = 30
+	elif u == 4: z = 40
+	elif u == 5: z = 50
+except ValueError:
+	u = int(input(
+		"Please Enter a whole number from 1 to 5"))  # asks the users to select a level and converts the string into an integer
 
-if u == 1: z = 10
-elif u == 2: z = 20
-elif u == 3: z = 30
-elif u == 4: z = 40
-elif u == 5: z = 50
-
+	if u == 1: z = 10
+	elif u == 2: z = 20
+	elif u == 3: z = 30
+	elif u == 4: z = 40
+	elif u == 5: z = 50
 #variables
 n = z
 guesses = 0
