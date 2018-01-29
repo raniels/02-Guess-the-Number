@@ -21,7 +21,7 @@ guesses = 0
 #generate a random integer between 1 and 20 (inclusive) and store it in the variable [number]
 number = random.randint(1,n)
 
-while not guesses >= 99:
+while not guesses >= 10:
 
 		guesses = 1 + guesses
 
@@ -48,5 +48,8 @@ while not guesses >= 99:
 
 			print("Gratz! You did it!")
 			break
+
+if guesses >= 10:
+	print("Mission failed, we'll get em next time")
 
 
