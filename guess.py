@@ -34,7 +34,7 @@ while not guesses >= 10:
 			#gives the user feedback based on their guess
 			if guess < (number - 10): hint = ("Try a (much) larger number!")
 			if (number - 10) <= guess <= (number - 5): hint = ("Try a (slightly) larger number")
-			elif number > guess > (number - 5): hint = ("You're really close though, try guessing a tiny bit higher!")
+			elif guess > (number - 5): hint = ("You're really close though, try guessing a tiny bit higher!")
 			print('You guessed wrong! Try again!' + hint)
 
 		elif guess > number:
@@ -42,7 +42,7 @@ while not guesses >= 10:
 			# gives the user feedback based on their guess
 			if guess > (number + 10): hint = ("Try a (much) smaller number!")
 			if (number + 10) >= guess >= (number + 5): hint = ("Try a (slightly) smaller number")
-			elif number < guess < (number + 5): hint = ("You're really close though, try guessing a tiny bit lower!")
+			elif guess < (number + 5): hint = ("You're really close though, try guessing a tiny bit lower!")
 			print('You guessed wrong! Try again!' + hint)
 		elif guess == number:
 
